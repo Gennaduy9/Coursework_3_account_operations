@@ -5,6 +5,10 @@ from operator import itemgetter
 
 
 def encave_numbers(volue: str):
+    '''
+    Разделяет строку на слова, используя пробелы как разделитель, и сохраняет их в переменную open_number
+    :return: Возвращает строку, состоящую из всех слов списка open_number, объединенных обратно с помощью пробелов
+    '''
     open_number = volue.split(' ')
     if len(open_number[-1]) == 16:
         open_number[-1] = open_number[-1][:4] + ' ' + open_number[-1][4:6] + '** **** ' + open_number[-1][12:]
@@ -16,6 +20,11 @@ def encave_numbers(volue: str):
 
 
 def latter_5_operations(data: list):
+    '''
+    Просматривает каждый словарь в списке ввода и проверяет, содержит ли он ключ «date» и значение ключа «состояние» «EXECUTED»
+    :param data: Связывает строку с переменной результата, которая включает дату, описание, замаскированные номера кредитных карт «от» и «до», а также сумму операции с валютой.
+    :return: Возвращает строку результата.
+    '''
     data_sorted = []
 
     for item in data:
