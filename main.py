@@ -45,6 +45,6 @@ def latter_5_operations(data: list):
     return result
 
 if __name__ == '__main__':
-    file = open('operations.json')
-    data = json.load(file)
+    with open('operations.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
     print(latter_5_operations(data))
